@@ -4,7 +4,7 @@ import Calendar from '../../Shared/Calendar/Calendar';
 import Appointments from '../Appointments/Appointments';
 
 const DashboardHome = () => {
-    const [date, setDate] = React.useState(new Date())
+    const [date, setDate] = React.useState(new Date());
     return (
         <Grid container spacing={2}>
             <Grid item xs={12} sm={5}>
@@ -14,7 +14,7 @@ const DashboardHome = () => {
                 ></Calendar>
             </Grid>
             <Grid item xs={12} sm={7}>
-                <Appointments date={date}></Appointments>
+                <Appointments date={date.toLocaleDateString()}></Appointments>
             </Grid>
         </Grid>
     );
